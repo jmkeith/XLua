@@ -27,6 +27,12 @@ function dump(o)
    end
 end
 
+function log_msg(msg)
+	if msg ~= nil then
+		return XLuaLogMsg(msg .. "\n")
+	end
+end
+
 --------------------------------------------------------------------------------
 -- DATAREF LUA GLUE
 --------------------------------------------------------------------------------
