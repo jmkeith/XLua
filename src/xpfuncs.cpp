@@ -379,6 +379,13 @@ static int XLuaCommandOnce(lua_State * L)
 	return 0;
 }
 
+static int XLuaLogMsg(std::string message)
+{
+	std::string out = message + "\n";
+
+	XPLMDebugString(const_cast<char *> (out.c_str()));
+}
+
 //----------------------------------------------------------------
 // TIMERS
 //----------------------------------------------------------------
